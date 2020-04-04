@@ -11,4 +11,14 @@ import UIKit
 
 extension MemeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.memeImageView.image = image
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
 }

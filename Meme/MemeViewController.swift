@@ -36,7 +36,11 @@ class MemeViewController: UIViewController {
     }
     
     @IBAction func cameraAction(_ sender: UIBarButtonItem) {
-        
+        let photoPickerVC = UIImagePickerController()
+        photoPickerVC.delegate = self
+        photoPickerVC.sourceType = .camera
+        //        photoVC.modalPresentationStyle = .fullScreen
+        self.present(photoPickerVC, animated: true, completion: nil)
     }
     
 }
