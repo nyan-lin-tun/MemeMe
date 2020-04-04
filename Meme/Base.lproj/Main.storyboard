@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeViewController" customModule="Meme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-Di-qaG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-K7-OS5">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="8Yw-K3-nwv">
+                                        <connections>
+                                            <action selector="cameraAction:" destination="BYZ-38-t0r" id="X0R-fo-O6g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vJu-NO-eIJ"/>
+                                    <barButtonItem title="Fonts" style="plain" id="3QS-is-g5L">
+                                        <connections>
+                                            <action selector="fontsAction:" destination="BYZ-38-t0r" id="afG-7f-ovq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VWy-Et-Msi"/>
+                                    <barButtonItem title="Album" id="0Lu-XF-Zrp">
+                                        <connections>
+                                            <action selector="albumAction:" destination="BYZ-38-t0r" id="o5C-ZJ-MAJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9C-GX-RsF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="uuW-k5-dbn"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xbv-K7-OS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0U8-pa-gua"/>
+                            <constraint firstItem="r9C-GX-RsF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Oo-d2-2pO"/>
+                            <constraint firstItem="xbv-K7-OS5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NG6-Mo-87I"/>
+                            <constraint firstItem="xbv-K7-OS5" firstAttribute="top" secondItem="Qea-Di-qaG" secondAttribute="bottom" id="Q3h-s4-ejN"/>
+                            <constraint firstItem="r9C-GX-RsF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YA7-dG-pnU"/>
+                            <constraint firstItem="Qea-Di-qaG" firstAttribute="top" secondItem="r9C-GX-RsF" secondAttribute="bottom" id="eq8-Ny-Fsn"/>
+                            <constraint firstItem="Qea-Di-qaG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fIi-Te-iQd"/>
+                            <constraint firstItem="r9C-GX-RsF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iMk-0d-9Iz"/>
+                            <constraint firstItem="Qea-Di-qaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oIu-79-AGV"/>
+                            <constraint firstItem="xbv-K7-OS5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zvj-8V-8pr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="8Yw-K3-nwv" id="sf3-js-cfj"/>
+                        <outlet property="memeImageView" destination="Qea-Di-qaG" id="nG5-6x-q8K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
