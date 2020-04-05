@@ -15,6 +15,8 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var bottomToolBar: UIToolbar!
     
     @IBOutlet weak var activityButton: UIBarButtonItem!
+    @IBOutlet weak var colorButton: UIBarButtonItem!
+    
     
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var memeImageView: UIImageView!
@@ -95,6 +97,10 @@ class MemeViewController: UIViewController {
         self.present(fontPickerVC, animated: true, completion: nil)
     }
     
+    @IBAction func colorAction(_ sender: UIBarButtonItem) {
+    }
+    
+    
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         self.activityButton.isEnabled = false
         self.memeImageView.image = UIImage(named: "")
@@ -118,6 +124,8 @@ class MemeViewController: UIViewController {
         photoPickerVC.allowsEditing = true
         self.present(photoPickerVC, animated: true, completion: nil)
     }
+    
+    
     
 }
 
