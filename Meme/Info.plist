@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Require permission to save Meme in photos.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Require camera access to take a picture of Meme.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
