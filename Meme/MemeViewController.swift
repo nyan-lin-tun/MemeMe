@@ -21,8 +21,7 @@ class MemeViewController: UIViewController {
     
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    
-    var finalMemeImage = UIImage()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +74,7 @@ class MemeViewController: UIViewController {
     }
     
     @IBAction func activityAction(_ sender: UIBarButtonItem) {
-        self.finalMemeImage = generateMemedImage()
+        let finalMemeImage = generateMemedImage()
         let activityVC = UIActivityViewController(activityItems: [finalMemeImage], applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
     }
@@ -86,6 +85,11 @@ class MemeViewController: UIViewController {
         
     }
     
+    @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        self.activityButton.isEnabled = false
+        self.memeImageView.image = UIImage(named: "")
+        self.setUpTextFields()
+    }
     
     @IBAction func albumAction(_ sender: UIBarButtonItem) {
         let photoPickerVC = UIImagePickerController()
@@ -104,6 +108,8 @@ class MemeViewController: UIViewController {
         photoPickerVC.allowsEditing = true
         self.present(photoPickerVC, animated: true, completion: nil)
     }
+    
+    
     
 }
 

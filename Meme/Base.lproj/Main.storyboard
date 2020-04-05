@@ -66,6 +66,12 @@
                                             <action selector="activityAction:" destination="BYZ-38-t0r" id="Bqq-b4-5Np"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aRA-nK-XWN"/>
+                                    <barButtonItem systemItem="cancel" id="j6w-sO-9QQ">
+                                        <connections>
+                                            <action selector="cancelAction:" destination="BYZ-38-t0r" id="J1K-Ig-GoI"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTON" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbK-4z-0zl">
