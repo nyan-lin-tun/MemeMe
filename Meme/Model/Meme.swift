@@ -20,15 +20,7 @@ struct Meme {
                          originalImage: UIImage,
                          memeImage: UIImage) {
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: originalImage, memeImage: memeImage)
-        
         UIImageWriteToSavedPhotosAlbum(meme.memeImage, self, nil, nil)
-        print("Save to photo")
-        /*
-        guard let toSaveImage = memeImage else {
-            print("Image not found!")
-            return
-        }
-        UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
- */
+        
     }
 }
