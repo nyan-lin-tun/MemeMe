@@ -76,11 +76,12 @@ class MemeViewController: UIViewController {
     @IBAction func activityAction(_ sender: UIBarButtonItem) {
         let finalMemeImage = generateMemedImage()
         let activityVC = UIActivityViewController(activityItems: [finalMemeImage], applicationActivities: nil)
-        activityVC.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
-            if !completed {
-                return
+        activityVC.completionWithItemsHandler = { activity, success, items, error in
+            if activity?.rawValue != "com.apple.UIKit.activity.SaveToCameraRoll" {
+                if success {
+                    Meme.saveMeme(topTextField: self.topTextField, bottomTextField: self.bottomTextField, originalImage: self.memeImageView.image!, memeImage: finalMemeImage)
+                }
             }
-            Meme.saveMeme(topTextField: self.topTextField, bottomTextField: self.bottomTextField, originalImage: self.memeImageView.image!, memeImage: finalMemeImage)
         }
         self.present(activityVC, animated: true, completion: nil)
     }
