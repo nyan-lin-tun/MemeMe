@@ -15,6 +15,7 @@
 		461C418A2439387E00DDB467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461C41882439387E00DDB467 /* LaunchScreen.storyboard */; };
 		461C41932439503D00DDB467 /* UIImagePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C41922439503D00DDB467 /* UIImagePickerExtension.swift */; };
 		461C4195243958D400DDB467 /* UITextFieldDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */; };
+		461C419824395D0F00DDB467 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461C419724395D0F00DDB467 /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		461C418B2439387E00DDB467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461C41922439503D00DDB467 /* UIImagePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerExtension.swift; sourceTree = "<group>"; };
 		461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDelegateExtension.swift; sourceTree = "<group>"; };
+		461C419724395D0F00DDB467 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		461C417C2439387D00DDB467 /* Meme */ = {
 			isa = PBXGroup;
 			children = (
+				461C419624395CF500DDB467 /* Fonts */,
 				461C41912439502A00DDB467 /* Extensions */,
 				461C417D2439387D00DDB467 /* AppDelegate.swift */,
 				461C417F2439387D00DDB467 /* SceneDelegate.swift */,
@@ -79,6 +82,14 @@
 				461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		461C419624395CF500DDB467 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				461C419724395D0F00DDB467 /* Impact.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461C419824395D0F00DDB467 /* Impact.ttf in Resources */,
 				461C418A2439387E00DDB467 /* LaunchScreen.storyboard in Resources */,
 				461C41872439387E00DDB467 /* Assets.xcassets in Resources */,
 				461C41852439387D00DDB467 /* Main.storyboard in Resources */,
