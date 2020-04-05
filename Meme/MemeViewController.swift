@@ -13,11 +13,19 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var memeImageView: UIImageView!
     
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //Disable camera for Simulators
+        self.cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
     
@@ -31,15 +39,17 @@ class MemeViewController: UIViewController {
         let photoPickerVC = UIImagePickerController()
         photoPickerVC.delegate = self
         photoPickerVC.sourceType = .photoLibrary
-//        photoVC.modalPresentationStyle = .fullScreen
+        photoPickerVC.allowsEditing = true
+        photoPickerVC.modalPresentationStyle = .fullScreen
         self.present(photoPickerVC, animated: true, completion: nil)
     }
     
     @IBAction func cameraAction(_ sender: UIBarButtonItem) {
         let photoPickerVC = UIImagePickerController()
         photoPickerVC.delegate = self
+        photoPickerVC.modalPresentationStyle = .fullScreen
         photoPickerVC.sourceType = .camera
-        //        photoVC.modalPresentationStyle = .fullScreen
+        photoPickerVC.allowsEditing = true
         self.present(photoPickerVC, animated: true, completion: nil)
     }
     

@@ -14,6 +14,7 @@
 		461C41872439387E00DDB467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461C41862439387E00DDB467 /* Assets.xcassets */; };
 		461C418A2439387E00DDB467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461C41882439387E00DDB467 /* LaunchScreen.storyboard */; };
 		461C41932439503D00DDB467 /* UIImagePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C41922439503D00DDB467 /* UIImagePickerExtension.swift */; };
+		461C4195243958D400DDB467 /* UITextFieldDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		461C41892439387E00DDB467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		461C418B2439387E00DDB467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461C41922439503D00DDB467 /* UIImagePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerExtension.swift; sourceTree = "<group>"; };
+		461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDelegateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				461C41922439503D00DDB467 /* UIImagePickerExtension.swift */,
+				461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461C4195243958D400DDB467 /* UITextFieldDelegateExtension.swift in Sources */,
 				461C41822439387D00DDB467 /* MemeViewController.swift in Sources */,
 				461C417E2439387D00DDB467 /* AppDelegate.swift in Sources */,
 				461C41802439387D00DDB467 /* SceneDelegate.swift in Sources */,
@@ -297,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5GPZ6WYCA;
 				INFOPLIST_FILE = Meme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5GPZ6WYCA;
 				INFOPLIST_FILE = Meme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

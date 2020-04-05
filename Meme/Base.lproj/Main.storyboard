@@ -18,6 +18,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-Di-qaG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wtt-t5-Zxl">
+                                <rect key="frame" x="20" y="100" width="374" height="35.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-K7-OS5">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
@@ -46,25 +52,39 @@
                                     <barButtonItem systemItem="action" id="uuW-k5-dbn"/>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTON" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbK-4z-0zl">
+                                <rect key="frame" x="20" y="765.5" width="374" height="35.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xbv-K7-OS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0U8-pa-gua"/>
                             <constraint firstItem="r9C-GX-RsF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Oo-d2-2pO"/>
+                            <constraint firstItem="wtt-t5-Zxl" firstAttribute="top" secondItem="r9C-GX-RsF" secondAttribute="bottom" constant="12" id="Ckq-Tb-Oae"/>
                             <constraint firstItem="xbv-K7-OS5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NG6-Mo-87I"/>
                             <constraint firstItem="xbv-K7-OS5" firstAttribute="top" secondItem="Qea-Di-qaG" secondAttribute="bottom" id="Q3h-s4-ejN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wtt-t5-Zxl" secondAttribute="trailing" constant="20" id="QDS-QY-iCE"/>
                             <constraint firstItem="r9C-GX-RsF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YA7-dG-pnU"/>
+                            <constraint firstItem="xbK-4z-0zl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ysz-Pd-f3W"/>
                             <constraint firstItem="Qea-Di-qaG" firstAttribute="top" secondItem="r9C-GX-RsF" secondAttribute="bottom" id="eq8-Ny-Fsn"/>
                             <constraint firstItem="Qea-Di-qaG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fIi-Te-iQd"/>
                             <constraint firstItem="r9C-GX-RsF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iMk-0d-9Iz"/>
+                            <constraint firstItem="wtt-t5-Zxl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nHn-lg-bkG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xbK-4z-0zl" secondAttribute="trailing" constant="20" id="oAV-m1-BWs"/>
                             <constraint firstItem="Qea-Di-qaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oIu-79-AGV"/>
+                            <constraint firstItem="xbv-K7-OS5" firstAttribute="top" secondItem="xbK-4z-0zl" secondAttribute="bottom" constant="12" id="vuR-qf-o6F"/>
                             <constraint firstItem="xbv-K7-OS5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zvj-8V-8pr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomTextField" destination="xbK-4z-0zl" id="gvj-ey-FOU"/>
                         <outlet property="cameraButton" destination="8Yw-K3-nwv" id="sf3-js-cfj"/>
                         <outlet property="memeImageView" destination="Qea-Di-qaG" id="nG5-6x-q8K"/>
+                        <outlet property="topTextField" destination="wtt-t5-Zxl" id="b3K-l3-380"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
