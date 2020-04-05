@@ -10,6 +10,9 @@ import UIKit
 
 class MemeViewController: UIViewController {
 
+    
+    @IBOutlet weak var activityButton: UIBarButtonItem!
+    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var memeImageView: UIImageView!
     
@@ -43,6 +46,11 @@ class MemeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         self.subscribeToKeyboardNotifications()
+        if self.memeImageView.image == nil {
+            self.activityButton.isEnabled = false
+        }else {
+            self.activityButton.isEnabled = true
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,12 +58,16 @@ class MemeViewController: UIViewController {
         self.unsubscribeToKeyboardNotifications()
     }
     
-    
-    @IBAction func fontsAction(_ sender: UIBarButtonItem) {
-        
+    @IBAction func activityAction(_ sender: UIBarButtonItem) {
         let image = UIImage()
         let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func fontsAction(_ sender: UIBarButtonItem) {
+        
+        
     }
     
     

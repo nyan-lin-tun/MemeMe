@@ -20,8 +20,9 @@ extension MemeViewController: UIImagePickerControllerDelegate, UINavigationContr
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.memeImageView.image = image
         }
-        
         self.dismiss(animated: true, completion: nil)
+        self.activityButton.isEnabled = true
+        
     }
     
     
