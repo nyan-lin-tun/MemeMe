@@ -87,8 +87,11 @@ class MemeViewController: UIViewController {
     
     
     @IBAction func fontsAction(_ sender: UIBarButtonItem) {
-        
-        
+        let fontPickerConfiguration = UIFontPickerViewController().configuration
+        fontPickerConfiguration.includeFaces = true
+        let fontPickerVC = UIFontPickerViewController(configuration: fontPickerConfiguration)
+        fontPickerVC.delegate = self
+        self.present(fontPickerVC, animated: true, completion: nil)
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
@@ -114,8 +117,6 @@ class MemeViewController: UIViewController {
         photoPickerVC.allowsEditing = true
         self.present(photoPickerVC, animated: true, completion: nil)
     }
-    
-    
     
 }
 

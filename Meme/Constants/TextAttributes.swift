@@ -14,10 +14,10 @@ struct TextAttributes {
     static var selectedFont:String = "Impact"
     
     static var fonts : [String] {
-        // Populate fonts array while making sure Impact is the first font
         var fontsArray = [String]()
         for family in UIFont.familyNames {
             for font in UIFont.fontNames(forFamilyName: family) {
+                //Check Impact font include or not
                 font != "Impact" ? fontsArray.append(font) : ()
             }
         }
