@@ -17,6 +17,7 @@
 		461C4195243958D400DDB467 /* UITextFieldDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */; };
 		461C419824395D0F00DDB467 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 461C419724395D0F00DDB467 /* Impact.ttf */; };
 		461C419B24395FAF00DDB467 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C419A24395FAF00DDB467 /* TextAttributes.swift */; };
+		461C419E2439735600DDB467 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461C419D2439735600DDB467 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		461C4194243958D400DDB467 /* UITextFieldDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDelegateExtension.swift; sourceTree = "<group>"; };
 		461C419724395D0F00DDB467 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		461C419A24395FAF00DDB467 /* TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttributes.swift; sourceTree = "<group>"; };
+		461C419D2439735600DDB467 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		461C417C2439387D00DDB467 /* Meme */ = {
 			isa = PBXGroup;
 			children = (
+				461C419C2439734800DDB467 /* Model */,
 				461C419924395FA000DDB467 /* Constants */,
 				461C419624395CF500DDB467 /* Fonts */,
 				461C41912439502A00DDB467 /* Extensions */,
@@ -101,6 +104,14 @@
 				461C419A24395FAF00DDB467 /* TextAttributes.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		461C419C2439734800DDB467 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				461C419D2439735600DDB467 /* Meme.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			files = (
 				461C4195243958D400DDB467 /* UITextFieldDelegateExtension.swift in Sources */,
 				461C41822439387D00DDB467 /* MemeViewController.swift in Sources */,
+				461C419E2439735600DDB467 /* Meme.swift in Sources */,
 				461C417E2439387D00DDB467 /* AppDelegate.swift in Sources */,
 				461C41802439387D00DDB467 /* SceneDelegate.swift in Sources */,
 				461C41932439503D00DDB467 /* UIImagePickerExtension.swift in Sources */,
