@@ -22,8 +22,7 @@ class MemeViewController: UIViewController {
         super.viewDidLoad()
         self.topTextField.delegate = self
         self.bottomTextField.delegate = self
-        self.topTextField.adjustsFontSizeToFitWidth = true
-        self.bottomTextField.adjustsFontSizeToFitWidth = true
+
     }
     
     

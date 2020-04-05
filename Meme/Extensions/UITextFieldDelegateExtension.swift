@@ -32,4 +32,16 @@ extension MemeViewController: UITextFieldDelegate {
         return true
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.topTextField {
+            if self.topTextField.text!.isEmpty {
+                self.topTextField.text = "TOP"
+            }
+        }else {
+            if self.bottomTextField.text!.isEmpty {
+                self.bottomTextField.text = "BOTTOM"
+            }
+        }
+    }
+    
 }
