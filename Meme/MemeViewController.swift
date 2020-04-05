@@ -98,6 +98,28 @@ class MemeViewController: UIViewController {
     }
     
     @IBAction func colorAction(_ sender: UIBarButtonItem) {
+        let colorActionSheet = UIAlertController(title: "Colors", message: nil, preferredStyle: .actionSheet)
+        
+        colorActionSheet.addAction(UIAlertAction(title: "Red", style: .default, handler: { (_) in
+            self.setTextFieldColor(.red)
+        }))
+        
+        colorActionSheet.addAction(UIAlertAction(title: "Green", style: .default, handler: { (_) in
+            self.setTextFieldColor(.green)
+        }))
+        
+        colorActionSheet.addAction(UIAlertAction(title: "Blue", style: .default, handler: { (_) in
+            self.setTextFieldColor(.blue)
+        }))
+        
+        colorActionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(colorActionSheet, animated: true, completion: nil)
+    }
+    
+    private func setTextFieldColor(_ color: UIColor) {
+        self.topTextField.textColor = color
+        self.bottomTextField.textColor = color
     }
     
     
