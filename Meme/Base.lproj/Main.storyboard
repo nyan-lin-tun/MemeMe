@@ -32,6 +32,9 @@
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-K7-OS5">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="VwA-cD-EON"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="camera" id="8Yw-K3-nwv">
                                         <connections>
@@ -54,6 +57,9 @@
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9C-GX-RsF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="q75-RR-JVS"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="action" id="uuW-k5-dbn">
                                         <connections>
