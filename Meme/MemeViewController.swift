@@ -17,12 +17,23 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var bottomTextField: UITextField!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpTextFields()
+
+    }
+    
+    private func setUpTextFields() {
         self.topTextField.delegate = self
         self.bottomTextField.delegate = self
-
+        self.topTextField.defaultTextAttributes = TextAttributes.attribute
+        self.bottomTextField.defaultTextAttributes = TextAttributes.attribute
+        self.topTextField.text = "TOP"
+        self.bottomTextField.text = "BOTTOM"
+        self.topTextField.textAlignment = .center
+        self.bottomTextField.textAlignment = .center
+        self.topTextField.adjustsFontSizeToFitWidth = true
+        self.bottomTextField.adjustsFontSizeToFitWidth = true
     }
     
     
@@ -41,7 +52,10 @@ class MemeViewController: UIViewController {
     
     
     @IBAction func fontsAction(_ sender: UIBarButtonItem) {
-    
+        
+        let image = UIImage()
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     
