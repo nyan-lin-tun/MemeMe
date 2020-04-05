@@ -100,9 +100,11 @@
                     <connections>
                         <outlet property="activityButton" destination="uuW-k5-dbn" id="bBR-ur-eFO"/>
                         <outlet property="bottomTextField" destination="xbK-4z-0zl" id="gvj-ey-FOU"/>
+                        <outlet property="bottomToolBar" destination="xbv-K7-OS5" id="SoU-UA-Mib"/>
                         <outlet property="cameraButton" destination="8Yw-K3-nwv" id="sf3-js-cfj"/>
                         <outlet property="memeImageView" destination="Qea-Di-qaG" id="nG5-6x-q8K"/>
                         <outlet property="topTextField" destination="wtt-t5-Zxl" id="b3K-l3-380"/>
+                        <outlet property="topToolBar" destination="r9C-GX-RsF" id="lzI-Fg-5sJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

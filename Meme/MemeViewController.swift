@@ -11,6 +11,9 @@ import UIKit
 class MemeViewController: UIViewController {
 
     
+    @IBOutlet weak var topToolBar: UIToolbar!
+    @IBOutlet weak var bottomToolBar: UIToolbar!
+    
     @IBOutlet weak var activityButton: UIBarButtonItem!
     
     @IBOutlet weak var cameraButton: UIBarButtonItem!
@@ -19,6 +22,7 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
+    var finalMemeImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +62,21 @@ class MemeViewController: UIViewController {
         self.unsubscribeToKeyboardNotifications()
     }
     
+    func generateMemedImage() -> UIImage {
+        self.topToolBar.isHidden = true
+        self.bottomToolBar.isHidden = true
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memeImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.topToolBar.isHidden = false
+        self.bottomToolBar.isHidden = false
+        return memeImage
+    }
+    
     @IBAction func activityAction(_ sender: UIBarButtonItem) {
-        let image = UIImage()
-        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.finalMemeImage = generateMemedImage()
+        let activityVC = UIActivityViewController(activityItems: [finalMemeImage], applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
     }
     
